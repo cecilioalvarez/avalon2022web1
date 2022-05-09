@@ -33,4 +33,21 @@ public class PersonaRepository {
 
         
     }
+
+    public void insertar(Persona p) {
+
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con
+                        .prepareStatement("insert into Personas (dni,nombre,edad) values (?,?,?)");) {
+            sentencia.setString(1, p.getDni());
+            sentencia.setString(2, p.getNombre());
+            sentencia.setInt(3, p.getEdad());
+            sentencia
+                    .executeUpdate();
+
+        } catch (SQLException | IOException e) {
+           throw new RuntimeException(e);
+        }
+    }
 }

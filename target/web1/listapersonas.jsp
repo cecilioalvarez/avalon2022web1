@@ -24,10 +24,12 @@ List<Persona> lista=repositorio.buscarTodos();
         </tr>
         <%for (Persona p:lista) { %>
         <tr>
+            <td><%=p.getDni()%></td>
             <td><%=p.getNombre()%></td>
+            <td><%=p.getEdad()%></td>
         </tr>
         <%}%>
     </table>
-
+    <a href="formulario.jsp">Insertar</a>
   </body>
 </html>
