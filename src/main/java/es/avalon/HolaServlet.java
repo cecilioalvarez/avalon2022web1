@@ -19,6 +19,8 @@ public class HolaServlet extends HttpServlet {
             PrintWriter pw= response.getWriter();
             PersonaRepository repositorio= new PersonaRepository();
             List<Persona> lista=repositorio.buscarTodos();
+            response.setContentType("text/html");
+            pw.println("hola que tal");
             for (Persona persona:lista) {
 
                 pw.println("<p>"+persona.getDni()+"</p>");
