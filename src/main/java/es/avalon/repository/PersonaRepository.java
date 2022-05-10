@@ -1,4 +1,5 @@
 package es.avalon.repository;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +12,6 @@ import es.avalon.activerecord.DataBaseHelper;
 import es.avalon.dominio.Persona;
 
 public class PersonaRepository {
-
 
     public List<Persona> buscarTodos() {
 
@@ -31,7 +31,6 @@ public class PersonaRepository {
             throw new RuntimeException(e);
         }
 
-        
     }
 
     public void insertar(Persona p) {
@@ -47,7 +46,22 @@ public class PersonaRepository {
                     .executeUpdate();
 
         } catch (SQLException | IOException e) {
-           throw new RuntimeException(e);
+            throw new RuntimeException(e);
         }
     }
+
+    public void borrar(Persona persona) {
+
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement(" delete from Personas where dni=?");) {
+            sentencia.setString(1, persona.getDni());
+            sentencia.executeUpdate();
+
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }

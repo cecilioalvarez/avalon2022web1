@@ -29,7 +29,10 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
     }
-
+    public Persona(String dni) {
+        this.dni = dni;
+    }
+    
     
     
 }
