@@ -1,4 +1,5 @@
 es/avalon/repository/LibroRepository.class
+es/avalon/services/LibroPersonaService.class
 es/avalon/dominio/Persona.class
 es/avalon/repository/PersonaRepository.class
 es/avalon/dominio/Libro.class

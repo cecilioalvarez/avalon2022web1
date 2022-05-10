@@ -15,7 +15,7 @@ Persona p= new Persona(dni,nombre,edad);
 // usar el repositorio para acceder a la base de datos e insertar
 repo.insertar(p);
 // volver a cargar el listado con los datos nuevos
-response.sendRedirect("listapersonas.jsp");
+response.sendRedirect("lista.jsp");
 
 
 %>
