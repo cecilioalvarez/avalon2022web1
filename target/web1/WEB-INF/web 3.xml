@@ -4,12 +4,12 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>ServletControlador</servlet-name>
-    <servlet-class>es.avalon.controllers.ServletControlador</servlet-class>
+    <servlet-name>HolaServlet</servlet-name>
+    <servlet-class>es.avalon.HolaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ServletControlador</servlet-name>
-    <url-pattern>/controlador</url-pattern>
+    <servlet-name>HolaServlet</servlet-name>
+    <url-pattern>/hola</url-pattern>
   </servlet-mapping>
 
 </web-app>

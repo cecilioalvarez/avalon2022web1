@@ -1,11 +1,6 @@
 <%@page import="java.util.List"%>
-<%@page import="es.avalon.services.*"%>
 <%@page import="es.avalon.dominio.*"%>
-
-<%
-LibroPersonaService servicio= new LibroPersonaService();
-List<Persona> lista=servicio.buscarTodasLasPersonas();
-%>
+<%List<Persona> lista=(List<Persona>)request.getAttribute("lista");%>
 
 <html>
   <body>
@@ -31,6 +26,6 @@ List<Persona> lista=servicio.buscarTodasLasPersonas();
         </tr>
         <%}%>
     </table>
-    <a href="formulario.jsp">Insertar</a>
+    <a href="/web1/controlador?accion=formulariopersona">Insertar</a>
   </body>
 </html>
