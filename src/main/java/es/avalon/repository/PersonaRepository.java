@@ -33,6 +33,27 @@ public class PersonaRepository {
 
     }
 
+
+    public Persona buscarUno(String dni) {
+
+       Persona p;
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("select * from Personas where dni=?");) {
+                    sentencia.setString(1,dni);
+                    ResultSet rs = sentencia.executeQuery();
+           rs.next();
+            p=new Persona(rs.getString("dni"),
+                        rs.getString("nombre"), rs.getInt("edad"));
+            
+            return p;
+
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
+        }
+       
+    }
+
     public void insertar(Persona p) {
 
         try (

@@ -25,6 +25,10 @@ public class LibroPersonaService {
         repoPersona.borrar(persona);
     }
 
+    public Persona buscarUnaPersona(String dni) {
+        return repoPersona.buscarUno(dni);
+    }
+
  
 
 

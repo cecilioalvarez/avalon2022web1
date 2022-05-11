@@ -23,6 +23,7 @@
             <td><%=p.getNombre()%></td>
             <td><%=p.getEdad()%></td>
             <td><a href="/web1/controlador?accion=borrarpersona&dni=<%=p.getDni()%>">borrar</a></td>
+             <td><a href="/web1/controlador?accion=detallepersona&dni=<%=p.getDni()%>">detalle</a></td>
         </tr>
         <%}%>
     </table>
