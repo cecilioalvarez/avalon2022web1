@@ -34,6 +34,14 @@ public class ServletControlador extends HttpServlet {
                 // usar el repositorio para acceder a la base de datos e insertar
                 servicio.borrarPersona(p);
 
+                List<Persona> listaPersonas = servicio.buscarTodasLasPersonas();
+                // oye a que tienda van a ir los yogures a que vista de la aplicacion
+                RequestDispatcher despachador = request.getRequestDispatcher("personas/lista.jsp");
+                // añadir datos para la vista
+                request.setAttribute("lista", listaPersonas);
+                despachador.forward(request, response);
+
+
 
             } 
             
