@@ -1,7 +1,11 @@
 package es.avalon.dominio;
 
-public class Persona {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Persona {
+    @Id
     private String dni;
     private String nombre;
     private int edad;

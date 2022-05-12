@@ -1,88 +1,50 @@
 package es.avalon.repository;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-import es.avalon.activerecord.DataBaseHelper;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
 import es.avalon.dominio.Persona;
 
 public class PersonaRepository {
 
     public List<Persona> buscarTodos() {
 
-        List<Persona> lista = new ArrayList<>();
-        try (
-                Connection con = DataBaseHelper.getConexion();
-                PreparedStatement sentencia = con.prepareStatement("select * from Personas");) {
-            ResultSet rs = sentencia.executeQuery();
-            while (rs.next()) {
-
-                lista.add(new Persona(rs.getString("dni"),
-                        rs.getString("nombre"), rs.getInt("edad")));
-            }
-            return lista;
-
-        } catch (SQLException | IOException e) {
-            throw new RuntimeException(e);
-        }
-
+       
+        EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em= emf.createEntityManager();
+        // no es una consulta de SQL es una consulta de JPA QL 
+        TypedQuery<Persona> consulta=em.createQuery("select p from Persona p",Persona.class);
+        return consulta.getResultList();
     }
 
 
     public Persona buscarUno(String dni) {
 
-       Persona p;
-        try (
-                Connection con = DataBaseHelper.getConexion();
-                PreparedStatement sentencia = con.prepareStatement("select * from Personas where dni=?");) {
-                    sentencia.setString(1,dni);
-                    ResultSet rs = sentencia.executeQuery();
-           rs.next();
-            p=new Persona(rs.getString("dni"),
-                        rs.getString("nombre"), rs.getInt("edad"));
-            
-            return p;
-
-        } catch (SQLException | IOException e) {
-            throw new RuntimeException(e);
-        }
+      return null;
        
     }
 
     public void insertar(Persona p) {
 
-        try (
-                Connection con = DataBaseHelper.getConexion();
-                PreparedStatement sentencia = con
-                        .prepareStatement("insert into Personas (dni,nombre,edad) values (?,?,?)");) {
-            sentencia.setString(1, p.getDni());
-            sentencia.setString(2, p.getNombre());
-            sentencia.setInt(3, p.getEdad());
-            sentencia
-                    .executeUpdate();
-
-        } catch (SQLException | IOException e) {
-            throw new RuntimeException(e);
-        }
+       EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
+       EntityManager em= emf.createEntityManager();
+       em.getTransaction().begin();
+       em.persist(p);
+       em.getTransaction().commit();
     }
 
     public void borrar(Persona persona) {
-
-        try (
-                Connection con = DataBaseHelper.getConexion();
-                PreparedStatement sentencia = con.prepareStatement(" delete from Personas where dni=?");) {
-            sentencia.setString(1, persona.getDni());
-            sentencia.executeUpdate();
-
-        } catch (SQLException | IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em= emf.createEntityManager();
+        em.getTransaction().begin();
+        em.remove(persona);
+        em.getTransaction().commit();
+       
+       
     }
 
 }
