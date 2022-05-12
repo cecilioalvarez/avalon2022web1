@@ -2,8 +2,10 @@ package es.avalon.dominio;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Personas")
 public class Persona {
     @Id
     private String dni;
@@ -36,6 +38,9 @@ public class Persona {
     public Persona(String dni) {
         this.dni = dni;
     }
+	public Persona() {
+	}
+    
     
     
     

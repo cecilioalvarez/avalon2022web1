@@ -13,38 +13,40 @@ public class PersonaRepository {
 
     public List<Persona> buscarTodos() {
 
-       
-        EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
-        EntityManager em= emf.createEntityManager();
-        // no es una consulta de SQL es una consulta de JPA QL 
-        TypedQuery<Persona> consulta=em.createQuery("select p from Persona p",Persona.class);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em = emf.createEntityManager();
+        System.out.println("el entity manager factory"+emf);
+        System.out.println("el entity manager" +em);
+        // no es una consulta de SQL es una consulta de JPA QL
+        TypedQuery<Persona> consulta = em.createQuery("select p from Persona p", Persona.class);
+        
         return consulta.getResultList();
     }
 
-
     public Persona buscarUno(String dni) {
 
-      return null;
-       
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em = emf.createEntityManager();
+        return em.find(Persona.class, dni);
+
     }
 
     public void insertar(Persona p) {
 
-       EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
-       EntityManager em= emf.createEntityManager();
-       em.getTransaction().begin();
-       em.persist(p);
-       em.getTransaction().commit();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(p);
+        em.getTransaction().commit();
     }
 
     public void borrar(Persona persona) {
-        EntityManagerFactory emf= Persistence.createEntityManagerFactory("UnidadCursos");
-        EntityManager em= emf.createEntityManager();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadCursos");
+        EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.remove(persona);
         em.getTransaction().commit();
-       
-       
+
     }
 
 }
