@@ -1,6 +1,0 @@
-es/avalon/repository/helper/JPAHelper.class
-es/avalon/services/LibroPersonaService.class
-es/avalon/dominio/Persona.class
-es/avalon/repository/PersonaRepository.class
-es/avalon/dominio/Libro.class
-es/avalon/controllers/ServletControlador.class
