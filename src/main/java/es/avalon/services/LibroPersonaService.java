@@ -3,12 +3,12 @@ package es.avalon.services;
 import java.util.List;
 
 import es.avalon.dominio.Persona;
-import es.avalon.repository.LibroRepository;
+//import es.avalon.repository.LibroRepository;
 import es.avalon.repository.PersonaRepository;
 
 public class LibroPersonaService {
 
-    private LibroRepository repoLibro= new LibroRepository();
+   // private LibroRepository repoLibro= new LibroRepository();
     private PersonaRepository repoPersona= new PersonaRepository();
 
     public List<Persona> buscarTodasLasPersonas() {

@@ -1,0 +1,10 @@
+es/avalon/repository/LibroRepository.class
+es/avalon/repository/helper/JPAHelper.class
+es/avalon/services/LibroPersonaService.class
+es/avalon/dominio/Persona.class
+es/avalon/repository/PersonaRepository.class
+es/avalon/dominio/Libro.class
+es/avalon/activerecord/PersonaActiveRecord.class
+es/avalon/controllers/ServletControlador.class
+es/avalon/activerecord/DataBaseHelper.class
+es/avalon/HolaServlet.class

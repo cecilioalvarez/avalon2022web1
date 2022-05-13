@@ -7,19 +7,18 @@
     <servlet-name>ServletControlador</servlet-name>
     <servlet-class>es.avalon.controllers.ServletControlador</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletControlador</servlet-name>
-    <url-pattern>/controlador</url-pattern>
-  </servlet-mapping>
-
   <servlet>
     <servlet-name>ServletControlador2</servlet-name>
     <servlet-class>es.avalon.controllers.ServletControlador2</servlet-class>
   </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServletControlador</servlet-name>
+    <url-pattern>/controlador</url-pattern>
+  </servlet-mapping>
+ 
   <servlet-mapping>
     <servlet-name>ServletControlador2</servlet-name>
     <url-pattern>/controlador2</url-pattern>
   </servlet-mapping>
-
-
 </web-app>

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../apache-tomcat-9.0.62"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.dependency.packagePresentation": "flat",
+		"maven.view": "hierarchical"
+	}
+}
