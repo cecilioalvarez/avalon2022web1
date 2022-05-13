@@ -29,6 +29,7 @@ public class ServletControlador extends HttpServlet {
 
                 String dni=request.getParameter("dni");
                 Persona p= new Persona(dni);
+                
                 servicio.borrarPersona(p);
                 cargarLista(request, response);
 
