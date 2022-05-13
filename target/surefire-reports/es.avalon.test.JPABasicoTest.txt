@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: es.avalon.test.JPABasicoTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.282 s - in es.avalon.test.JPABasicoTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.623 s <<< FAILURE! - in es.avalon.test.JPABasicoTest
+testJPAEdadPersona(es.avalon.test.JPABasicoTest)  Time elapsed: 2.555 s  <<< FAILURE!
+java.lang.AssertionError: expected:<40> but was:<0>
+	at es.avalon.test.JPABasicoTest.testJPAEdadPersona(JPABasicoTest.java:93)
+
