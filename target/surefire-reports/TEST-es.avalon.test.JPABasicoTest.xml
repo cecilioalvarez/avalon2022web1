@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.avalon.test.JPABasicoTest" time="2.111" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.avalon.test.JPABasicoTest" time="2.429" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire/surefirebooter7895920618777264357.jar /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire 2022-05-16T15-40-19_706-jvmRun1 surefire14545230304329896625tmp surefire_01442231769170954847tmp"/>
+    <property name="sun.java.command" value="/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire/surefirebooter15293654655157605418.jar /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire 2022-05-16T18-56-19_780-jvmRun1 surefire15246561265112505894tmp surefire_01861919222850204274tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/test-classes:/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/classes:/Users/cecilioalvarezcaules/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/cecilioalvarezcaules/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/cecilioalvarezcaules/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/org/hibernate/hibernate-core/5.6.8.Final/hibernate-core-5.6.8.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/cecilioalvarezcaules/.m2/repository/net/bytebuddy/byte-buddy/1.12.9/byte-buddy-1.12.9.jar:/Users/cecilioalvarezcaules/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/cecilioalvarezcaules/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/cecilioalvarezcaules/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/cecilioalvarezcaules/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/Users/cecilioalvarezcaules/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/cecilioalvarezcaules/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/cecilioalvarezcaules/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/cecilioalvarezcaules/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/cecilioalvarezcaules/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/cecilioalvarezcaules/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/cecilioalvarezcaules/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/Users/cecilioalvarezcaules/.m2/repository/mysql/mysql-connector-java/8.0.29/mysql-connector-java-8.0.29.jar:/Users/cecilioalvarezcaules/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar:/Users/cecilioalvarezcaules/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire/surefirebooter7895920618777264357.jar"/>
+    <property name="surefire.real.class.path" value="/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/target/surefire/surefirebooter15293654655157605418.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="18.0.1+0"/>
@@ -56,14 +56,13 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="testJPAORdenadoPorEdad" classname="es.avalon.test.JPABasicoTest" time="1.957"/>
-  <testcase name="testJPAConsultaSeleccionarNombreAndEdad" classname="es.avalon.test.JPABasicoTest" time="0.021"/>
+  <testcase name="testJPAORdenadoPorEdad" classname="es.avalon.test.JPABasicoTest" time="0.004"/>
+  <testcase name="testJPAConsultaSeleccionarNombreAndEdad" classname="es.avalon.test.JPABasicoTest" time="2.301"/>
   <testcase name="testPersona" classname="es.avalon.test.JPABasicoTest" time="0"/>
-  <testcase name="testJPAConsultaSeleccionarNombre" classname="es.avalon.test.JPABasicoTest" time="0.008"/>
-  <testcase name="testJPAEdadSumaPersona" classname="es.avalon.test.JPABasicoTest" time="0.009"/>
-  <testcase name="testJPANombrePersonaMayusculas" classname="es.avalon.test.JPABasicoTest" time="0.012"/>
-  <testcase name="testJPAEdadPersona" classname="es.avalon.test.JPABasicoTest" time="0.005"/>
-  <testcase name="testJPAConsultaRangoPersonas" classname="es.avalon.test.JPABasicoTest" time="0.009"/>
-  <testcase name="testJPARelacion" classname="es.avalon.test.JPABasicoTest" time="0.049"/>
-  <testcase name="testBuscarPersonaPorDNI" classname="es.avalon.test.JPABasicoTest" time="0.007"/>
+  <testcase name="testJPAConsultaSeleccionarNombre" classname="es.avalon.test.JPABasicoTest" time="0.01"/>
+  <testcase name="testJPAEdadSumaPersona" classname="es.avalon.test.JPABasicoTest" time="0.01"/>
+  <testcase name="testJPANombrePersonaMayusculas" classname="es.avalon.test.JPABasicoTest" time="0.022"/>
+  <testcase name="testJPAEdadPersona" classname="es.avalon.test.JPABasicoTest" time="0.009"/>
+  <testcase name="testJPAConsultaRangoPersonas" classname="es.avalon.test.JPABasicoTest" time="0.028"/>
+  <testcase name="testBuscarPersonaPorDNI" classname="es.avalon.test.JPABasicoTest" time="0.013"/>
 </testsuite>

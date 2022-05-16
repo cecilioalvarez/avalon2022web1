@@ -64,7 +64,7 @@ public class ServletControlador extends HttpServlet {
 
     private void cargarLista(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Persona> listaPersonas = servicio.buscarTodasLasPersonas();
+        List<Persona> listaPersonas = servicio.buscarTodosConLibros();
         // oye a que tienda van a ir los yogures a que vista de la aplicacion
         RequestDispatcher despachador = request.getRequestDispatcher("personas/lista.jsp");
         // añadir datos para la vista

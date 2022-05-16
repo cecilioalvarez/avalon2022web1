@@ -29,6 +29,10 @@ public class LibroPersonaService {
         return repoPersona.buscarUno(dni);
     }
 
+    public List<Persona> buscarTodosConLibros() {
+        return repoPersona.buscarTodosConLibros();
+    }
+
  
 
 

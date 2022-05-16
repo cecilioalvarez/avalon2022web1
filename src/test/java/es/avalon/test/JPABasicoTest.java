@@ -8,6 +8,7 @@ import javax.persistence.TypedQuery;
 
 import org.junit.Test;
 
+import es.avalon.dominio.Libro;
 import es.avalon.dominio.Persona;
 import es.avalon.repository.PersonaRepository;
 import es.avalon.repository.helper.JPAHelper;
@@ -127,6 +128,7 @@ public class JPABasicoTest {
     @Test
     public void testJPAORdenadoPorEdad() {
 
+        /*
         EntityManager em= JPAHelper.getEntityManager();
         TypedQuery<Persona> consulta=em.
         createQuery("select p from Persona p order by p.edad",Persona.class);
@@ -134,30 +136,28 @@ public class JPABasicoTest {
 
         assertEquals("juan", lista.get(0).getNombre());
         assertEquals("maria", lista.get(1).getNombre());
-       
+       */
     
                 
     }
 
     
-
+    /*
     @Test
     public void testJPARelacion() {
 
         EntityManager em= JPAHelper.getEntityManager();
         TypedQuery<Persona> consulta=em.
-        createQuery("select p from Persona p where p.dni='1'",Persona.class);
+        createQuery("select p from Persona p join fetch p.libros",Persona.class);
         List<Persona> lista= consulta.getResultList();
-        Persona p= lista.get(0);
+        
+        for (Persona p : lista) {
 
-        assertEquals("pepe",p.getLibros().get(0).getAutor());
+           assertEquals(2, p.getLibros().size());
+        }
 
-      
-
-       
-    
                 
     }
-
+    */
  
 }
