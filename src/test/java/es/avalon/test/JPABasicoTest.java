@@ -37,6 +37,7 @@ public class JPABasicoTest {
         
     }
 
+
     @Test
     public void testJPAConsultaSeleccionarNombre() {
 
@@ -137,5 +138,26 @@ public class JPABasicoTest {
     
                 
     }
+
+    
+
+    @Test
+    public void testJPARelacion() {
+
+        EntityManager em= JPAHelper.getEntityManager();
+        TypedQuery<Persona> consulta=em.
+        createQuery("select p from Persona p where p.dni='1'",Persona.class);
+        List<Persona> lista= consulta.getResultList();
+        Persona p= lista.get(0);
+
+        assertEquals("pepe",p.getLibros().get(0).getAutor());
+
+      
+
+       
+    
+                
+    }
+
  
 }

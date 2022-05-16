@@ -1,7 +1,11 @@
 package es.avalon.dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +22,11 @@ public class Persona {
     private String dni;
     private String nombre;
     private int edad;
+    @OneToMany(mappedBy = "persona")
+    private final List<Libro> libros= new ArrayList<>();
+
+   
+
     public Persona(String dni) {
         this.dni = dni;
     }

@@ -3,6 +3,7 @@
     <persistence-unit name="UnidadCursos" transaction-type="RESOURCE_LOCAL">
        
         <class>es.avalon.dominio.Persona</class>
+        <class>es.avalon.dominio.Libro</class>
         <properties>
             
             <property name="hibernate.show_sql" value="true" />
