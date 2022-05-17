@@ -2,6 +2,7 @@
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/dominio/Persona.java
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/controllers/ServletControlador.java
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/repository/helper/JPAHelper.java
+/Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/springconfiguracion/ConfiguradorSpring.java
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/activerecord/DataBaseHelper.java
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/ServletLista.java
 /Users/cecilioalvarezcaules/Desktop/java maven2/avalon2022web1/src/main/java/es/avalon/repository/PersonaRepository.java

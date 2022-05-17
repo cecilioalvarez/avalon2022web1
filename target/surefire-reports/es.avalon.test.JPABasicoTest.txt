@@ -1,4 +1,60 @@
 -------------------------------------------------------------------------------
 Test set: es.avalon.test.JPABasicoTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.429 s - in es.avalon.test.JPABasicoTest
+Tests run: 9, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 1.106 s <<< FAILURE! - in es.avalon.test.JPABasicoTest
+testJPAConsultaSeleccionarNombreAndEdad(es.avalon.test.JPABasicoTest)  Time elapsed: 1.067 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+Caused by: java.net.ConnectException: Connection refused
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testJPAConsultaSeleccionarNombre(es.avalon.test.JPABasicoTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombre(JPABasicoTest.java:45)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testJPAEdadSumaPersona(es.avalon.test.JPABasicoTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testJPAEdadSumaPersona(JPABasicoTest.java:117)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testJPANombrePersonaMayusculas(es.avalon.test.JPABasicoTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testJPANombrePersonaMayusculas(JPABasicoTest.java:104)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testJPAEdadPersona(es.avalon.test.JPABasicoTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testJPAEdadPersona(JPABasicoTest.java:91)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testJPAConsultaRangoPersonas(es.avalon.test.JPABasicoTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testJPAConsultaRangoPersonas(JPABasicoTest.java:77)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+
+testBuscarPersonaPorDNI(es.avalon.test.JPABasicoTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class es.avalon.repository.helper.JPAHelper
+	at es.avalon.test.JPABasicoTest.testBuscarPersonaPorDNI(JPABasicoTest.java:33)
+Caused by: java.lang.ExceptionInInitializerError: Exception org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] [in thread "main"]
+	at es.avalon.test.JPABasicoTest.testJPAConsultaSeleccionarNombreAndEdad(JPABasicoTest.java:60)
+

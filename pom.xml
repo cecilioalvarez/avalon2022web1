@@ -20,7 +20,6 @@
 
   <dependencies>
 
-    
 
     <dependency>
       <groupId>junit</groupId>
@@ -33,14 +32,32 @@
       <groupId>org.hibernate.javax.persistence</groupId>
       <artifactId>hibernate-jpa-2.1-api</artifactId>
       <version>1.0.2.Final</version>
-  </dependency>
-  
-  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-<dependency>
-  <groupId>org.hibernate</groupId>
-  <artifactId>hibernate-core</artifactId>
-  <version>5.6.8.Final</version>
-</dependency>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.8.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>5.3.20</version>
+    </dependency>
 
 
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -71,7 +88,7 @@
 
   <build>
     <finalName>web1</finalName>
-    
+
     <pluginManagement>
       <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -90,7 +107,7 @@
           <configuration>
             <annotationProcessorPaths>
               <path>
-                <groupId>org.projectlombok</groupId>     
+                <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.24</version>
               </path>
@@ -107,7 +124,7 @@
           <configuration>
             <outputDirectory>/Users/cecilioalvarezcaules/Desktop/apache-tomcat-9.0.62/webapps</outputDirectory>
           </configuration>
-            </plugin>
+        </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>

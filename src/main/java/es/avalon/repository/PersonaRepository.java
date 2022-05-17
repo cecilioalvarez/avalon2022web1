@@ -5,9 +5,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Repository;
+
 import es.avalon.dominio.Persona;
 import es.avalon.repository.helper.JPAHelper;
-
+@Repository
 public class PersonaRepository {
 
     public List<Persona> buscarTodos() {

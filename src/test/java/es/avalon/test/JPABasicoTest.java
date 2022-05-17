@@ -15,6 +15,7 @@ import es.avalon.repository.helper.JPAHelper;
 
 public class JPABasicoTest {
     
+    /*
     @Test
     public void testPersona() {
 
@@ -136,12 +137,12 @@ public class JPABasicoTest {
 
         assertEquals("juan", lista.get(0).getNombre());
         assertEquals("maria", lista.get(1).getNombre());
-       */
+       
     
                 
     }
 
-    
+    */
     /*
     @Test
     public void testJPARelacion() {
