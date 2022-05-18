@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import es.avalon.dominio.Persona;
 //import es.avalon.repository.LibroRepository;
@@ -18,12 +19,12 @@ public class LibroPersonaService {
 
         return repoPersona.buscarTodos();
     }
-
+    @Transactional
     public void insertarPersona(Persona persona) {
 
         repoPersona.insertar(persona);
     }
-
+    @Transactional
     public void borrarPersona(Persona persona) {
         repoPersona.borrar(persona);
     }
