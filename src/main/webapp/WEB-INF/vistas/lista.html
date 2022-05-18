@@ -1,5 +1,13 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <body>
-        hola soy una lista
+        <table>
+            <tr th:each="persona:${lista}">
+
+                <td th:text="${persona.dni}"></td>
+                <td th:text="${persona.nombre}"></td>
+                <td th:text="${persona.edad}"></td>
+
+            </tr>
+        </table>
     </body>
 </html>
