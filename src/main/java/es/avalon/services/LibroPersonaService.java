@@ -36,6 +36,9 @@ public class LibroPersonaService {
     public List<Persona> buscarTodosConLibros() {
         return repoPersona.buscarTodosConLibros();
     }
+    public void salvarPersona(Persona persona) {
+        repoPersona.salvar(persona);
+    }
 
  
 

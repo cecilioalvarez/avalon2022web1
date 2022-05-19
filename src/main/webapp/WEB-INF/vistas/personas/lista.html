@@ -6,7 +6,9 @@
                 <td th:text="${persona.dni}"></td>
                 <td th:text="${persona.nombre}"></td>
                 <td th:text="${persona.edad}"></td>
-
+                <td><a th:href="@{borrar(dni=${persona.dni})}">borrar</a></td>
+                <td><a th:href="@{detalle(dni=${persona.dni})}">detalle</a></td>
+                <td><a th:href="@{editar(dni=${persona.dni})}">editar</a></td>
             </tr>
         </table>
         <form action="nueva" method="POST">

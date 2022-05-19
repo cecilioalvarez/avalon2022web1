@@ -34,6 +34,11 @@ public class PersonaRepository {
         em.remove(em.merge(persona));
     }
 
+    @Transactional
+    public void salvar(Persona persona) {       
+       em.merge(persona);
+    }
+
     public List<Persona> buscarTodosConLibros() {
         TypedQuery<Persona> consulta = em.createQuery("select p from Persona p join fetch p.libros", Persona.class);
         List<Persona> lista=consulta.getResultList();

@@ -34,10 +34,53 @@ public class PersonasController {
     public String insertar(Model modelo,Persona persona) {
         
        servicio.insertarPersona(persona);
+       //cargo datos que se muestran en la vista
        modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
 
         return "personas/lista";
     }
+
+    @PostMapping("/salvar")
+    public String salvar(Model modelo,Persona persona) {
+        
+       servicio.salvarPersona(persona);
+       //cargo datos que se muestran en la vista
+       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
+
+        return "personas/lista";
+    }
+
+
+    @GetMapping("/borrar")
+    public String borrar(Model modelo,String dni) {
+        
+       servicio.borrarPersona(new Persona(dni));
+       //cargo datos que se muestran en la vista
+       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
+
+        return "personas/lista";
+    }
+
+    @GetMapping("/detalle")
+    public String detalle(Model modelo,String dni) {
+        
+       Persona persona=servicio.buscarUnaPersona(dni);
+       //cargo datos que se muestran en la vista
+       modelo.addAttribute("persona", persona);
+
+        return "personas/detalle";
+    }
+
+    @GetMapping("/editar")
+    public String editar (Model modelo,String dni) {
+        
+       Persona persona=servicio.buscarUnaPersona(dni);
+       //cargo datos que se muestran en la vista
+       modelo.addAttribute("persona", persona);
+
+        return "personas/editar";
+    }
+
 
 
     
