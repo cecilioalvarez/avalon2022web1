@@ -4,21 +4,41 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import es.avalon.dominio.Persona;
 import es.avalon.services.LibroPersonaService;
 
 @Controller
 @RequestMapping("/personas")
 public class PersonasController {
 
+    
     @Autowired
     LibroPersonaService servicio;   
     @GetMapping("/lista")
     public String lista(Model modelo) {
         // pasa a la vista el listado de personas con sus libros
         modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
-        return "lista";
+        return "personas/lista";
     }
+
+    @PostMapping("/nueva")
+    public String nueva(Persona persona) {
+        // pasa a la vista el listado de personas con sus libros
+        return "personas/nueva";
+    }
+
+    @PostMapping("/insertar")
+    public String insertar(Model modelo,Persona persona) {
+        
+       servicio.insertarPersona(persona);
+       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
+
+        return "personas/lista";
+    }
+
+
     
 }

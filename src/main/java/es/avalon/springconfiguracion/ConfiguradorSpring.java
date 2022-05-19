@@ -87,6 +87,7 @@ public class ConfiguradorSpring  implements ApplicationContextAware{
 		SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
 		//contexto con todos los objetos de spring
 		resolver.setApplicationContext(contexto);
+		
 		resolver.setPrefix("/WEB-INF/vistas/");
 		resolver.setSuffix(".html");
 
