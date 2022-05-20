@@ -1,8 +1,9 @@
 <html>
-    <head>
 
-        <script type="text/javascript">
-           
+<head>
+
+    <script type="text/javascript">
+
         function pulsar() {
             /*
             var nota= prompt("dame una nota");
@@ -21,21 +22,32 @@
                 console.log(i);
             }
             */
-            var lista=[1,2,5,8,1];
+            var lista = [1, 2, 5, 8, 1];
 
-            for (var i=0;i<lista.length;i++) {
+            for (var i = 0; i < lista.length; i++) {
 
-                console.log(lista[i]);
+               crearParrafo(lista[i]);
             }
         }
 
-        </script>
-    </head>
-    <body>
-        hola 001
-        <div id="zona">
+        function crearParrafo(texto) {
 
-        </div>
-        <input type="button" value="pulsame" onclick="pulsar()"/>
-    </body> 
+            var zona = document.getElementById("zona");
+            var parrafo = document.createElement("p");
+            var texto = document.createTextNode(texto);
+            parrafo.appendChild(texto);
+            zona.appendChild(parrafo);
+        }
+
+    </script>
+</head>
+
+<body>
+    hola 001
+    <div id="zona">
+
+    </div>
+    <input type="button" value="pulsame" onclick="pulsar()" />
+</body>
+
 </html>
