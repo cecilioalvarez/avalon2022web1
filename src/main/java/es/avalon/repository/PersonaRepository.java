@@ -16,6 +16,8 @@ public class PersonaRepository {
     @PersistenceContext
     EntityManager em;
 
+    // ! esto es un comentario importante 
+    /// TODO queda esto por hacer 
     public List<Persona> buscarTodos() {
         TypedQuery<Persona> consulta = em.createQuery("select p from Persona p", Persona.class);
         return consulta.getResultList();
