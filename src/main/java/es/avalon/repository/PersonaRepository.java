@@ -49,7 +49,7 @@ public class PersonaRepository {
     }
 
     public List<Persona> buscarTodosConLibrosOrdenados(String campo) {
-        String texto="select p from Persona p join fetch p.libros";
+        String texto="select p from Persona p ";
         if (campo.equalsIgnoreCase("nombre")) {
             texto+= " order by p.nombre";
         }

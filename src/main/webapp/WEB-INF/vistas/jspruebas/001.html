@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+        <script type="text/javascript">
+            /*
+            alert("hola javascript");
+            var numero= prompt("dame un numero");
+            alert(numero);
+            */
+            function f1() {
+                // lee del documento un elemento que es una zona
+                var zona=document.getElementById("zona");
+
+
+                //create una etiqueta y lo almaceno en una variable
+                var parrafo= document.createElement("p");
+                // create un texto y almacenalo en una variable
+                var texto= document.createTextNode("hola has pulsado");
+               //al parrafo que generaste añadele el texto
+                parrafo.appendChild(texto);
+                // a la zona que seleccionaste añadele el parrafo
+                zona.appendChild(parrafo);
+              
+            }
+        </script>
+    </head>
+    <body>
+        hola 001
+        <div id="zona">
+
+        </div>
+        <input type="button" value="pulsame" onclick="f1()"/>
+    </body> 
+</html>

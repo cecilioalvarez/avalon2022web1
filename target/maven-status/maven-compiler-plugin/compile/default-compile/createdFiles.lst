@@ -1,4 +1,5 @@
 es/avalon/springconfiguracion/InicializadorSpring.class
+es/avalon/controllers/PruebaController.class
 es/avalon/springconfiguracion/ConfiguradorSpring.class
 es/avalon/repository/helper/JPAHelper.class
 es/avalon/services/LibroPersonaService.class

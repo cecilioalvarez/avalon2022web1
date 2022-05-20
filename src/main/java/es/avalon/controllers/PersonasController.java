@@ -39,22 +39,15 @@ public class PersonasController {
 
     @PostMapping("/insertar")
     public String insertar(Model modelo,Persona persona) {
-        
        servicio.insertarPersona(persona);
-       //cargo datos que se muestran en la vista
-       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
-
-        return "personas/lista";
+       return "redirect:lista";
     }
 
     @PostMapping("/salvar")
     public String salvar(Model modelo,Persona persona) {
         
        servicio.salvarPersona(persona);
-       //cargo datos que se muestran en la vista
-       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
-
-        return "personas/lista";
+       return "redirect:lista";
     }
 
 
@@ -62,10 +55,7 @@ public class PersonasController {
     public String borrar(Model modelo,String dni) {
         
        servicio.borrarPersona(new Persona(dni));
-       //cargo datos que se muestran en la vista
-       modelo.addAttribute("lista", servicio.buscarTodasLasPersonas());
-
-        return "personas/lista";
+       return "redirect:lista";
     }
 
     @GetMapping("/detalle")
