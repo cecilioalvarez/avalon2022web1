@@ -24,6 +24,13 @@ public class PersonasController {
         return "personas/lista";
     }
 
+    @GetMapping("/lista/orden")
+    public String listaOrdenada(Model modelo, String campo) {
+        // pasa a la vista el listado de personas con sus libros
+        modelo.addAttribute("lista", servicio.buscarTodosConLibrosOrdenados(campo));
+        return "personas/lista";
+    }
+
     @PostMapping("/nueva")
     public String nueva(Persona persona) {
         // pasa a la vista el listado de personas con sus libros

@@ -39,6 +39,9 @@ public class LibroPersonaService {
     public void salvarPersona(Persona persona) {
         repoPersona.salvar(persona);
     }
+    public List<Persona> buscarTodosConLibrosOrdenados(String campo) {
+        return repoPersona.buscarTodosConLibrosOrdenados(campo);
+    }
    
    
 

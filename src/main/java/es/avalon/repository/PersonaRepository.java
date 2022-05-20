@@ -40,7 +40,25 @@ public class PersonaRepository {
     }
 
     public List<Persona> buscarTodosConLibros() {
-        TypedQuery<Persona> consulta = em.createQuery("select p from Persona p join fetch p.libros", Persona.class);
+        TypedQuery<Persona> consulta =
+         em.createQuery("select p from Persona p join fetch p.libros ", Persona.class);
+
+        List<Persona> lista=consulta.getResultList();
+        return lista;
+
+    }
+
+    public List<Persona> buscarTodosConLibrosOrdenados(String campo) {
+        String texto="select p from Persona p join fetch p.libros";
+        if (campo.equalsIgnoreCase("nombre")) {
+            texto+= " order by p.nombre";
+        }
+        if (campo.equalsIgnoreCase("edad")) {
+            texto+= " order by p.edad";
+        }
+        TypedQuery<Persona> consulta =
+         em.createQuery(texto, Persona.class);
+        System.out.println(texto);
         List<Persona> lista=consulta.getResultList();
         return lista;
 

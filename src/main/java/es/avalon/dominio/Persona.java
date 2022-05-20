@@ -25,12 +25,7 @@ public class Persona {
     @OneToMany(mappedBy = "persona")
     private final List<Libro> libros= new ArrayList<>();
 
-   
-
     public Persona(String dni) {
         this.dni = dni;
-    }
-    
-    
-  
+    }  
 }

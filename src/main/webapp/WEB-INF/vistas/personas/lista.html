@@ -1,6 +1,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <body>
         <table>
+            <tr>
+                <th>Dni</th>
+                <th><a th:href="@{lista/orden(campo=nombre)}">Nombre</a></th>
+                <th><a th:href="@{/lista/orden(campo=edad)}">Edad</a></th>
+                <th>Borrar</th>
+                <th>Detalle</th>
+                <th>Editar</th>
+            </tr>
             <tr th:each="persona:${lista}">
 
                 <td th:text="${persona.dni}"></td>
