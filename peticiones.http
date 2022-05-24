@@ -8,3 +8,5 @@ Content-Type: application/json
     "nombre": "arturo",
     "edad":50
 }
+##########
+DELETE  http://localhost:8080/webapi/personas/1
