@@ -1,0 +1,10 @@
+GET  http://localhost:8080/webapi/personas
+#########
+POST  http://localhost:8080/webapi/personas
+Content-Type: application/json
+
+{
+    "dni":"1000",
+    "nombre": "arturo",
+    "edad":50
+}
